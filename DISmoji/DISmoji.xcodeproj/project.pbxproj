@@ -14,6 +14,8 @@
 		1AB670D31CDA7B91000EBBAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB670D11CDA7B91000EBBAC /* LaunchScreen.storyboard */; };
 		1AB670DE1CDA7B91000EBBAC /* DISmojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB670DD1CDA7B91000EBBAC /* DISmojiTests.swift */; };
 		1AB670E91CDA7B91000EBBAC /* DISmojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB670E81CDA7B91000EBBAC /* DISmojiUITests.swift */; };
+		1AB670FD1CDA8982000EBBAC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB670FC1CDA8982000EBBAC /* KeyboardViewController.swift */; };
+		1AB671011CDA8982000EBBAC /* bb9moji.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1AB670FA1CDA8982000EBBAC /* bb9moji.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,28 @@
 			remoteGlobalIDString = 1AB670C41CDA7B90000EBBAC;
 			remoteInfo = DISmoji;
 		};
+		1AB670FF1CDA8982000EBBAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AB670BD1CDA7B90000EBBAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AB670F91CDA8982000EBBAC;
+			remoteInfo = bb9moji;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1AB671051CDA8982000EBBAC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1AB671011CDA8982000EBBAC /* bb9moji.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1AB670C51CDA7B90000EBBAC /* DISmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DISmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +70,9 @@
 		1AB670E41CDA7B91000EBBAC /* DISmojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DISmojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB670E81CDA7B91000EBBAC /* DISmojiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DISmojiUITests.swift; sourceTree = "<group>"; };
 		1AB670EA1CDA7B91000EBBAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AB670FA1CDA8982000EBBAC /* bb9moji.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = bb9moji.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB670FC1CDA8982000EBBAC /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		1AB670FE1CDA8982000EBBAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +97,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AB670F71CDA8982000EBBAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +113,7 @@
 				1AB670C71CDA7B91000EBBAC /* DISmoji */,
 				1AB670DC1CDA7B91000EBBAC /* DISmojiTests */,
 				1AB670E71CDA7B91000EBBAC /* DISmojiUITests */,
+				1AB670FB1CDA8982000EBBAC /* bb9moji */,
 				1AB670C61CDA7B90000EBBAC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +124,7 @@
 				1AB670C51CDA7B90000EBBAC /* DISmoji.app */,
 				1AB670D91CDA7B91000EBBAC /* DISmojiTests.xctest */,
 				1AB670E41CDA7B91000EBBAC /* DISmojiUITests.xctest */,
+				1AB670FA1CDA8982000EBBAC /* bb9moji.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +160,15 @@
 			path = DISmojiUITests;
 			sourceTree = "<group>";
 		};
+		1AB670FB1CDA8982000EBBAC /* bb9moji */ = {
+			isa = PBXGroup;
+			children = (
+				1AB670FC1CDA8982000EBBAC /* KeyboardViewController.swift */,
+				1AB670FE1CDA8982000EBBAC /* Info.plist */,
+			);
+			path = bb9moji;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +179,12 @@
 				1AB670C11CDA7B90000EBBAC /* Sources */,
 				1AB670C21CDA7B90000EBBAC /* Frameworks */,
 				1AB670C31CDA7B90000EBBAC /* Resources */,
+				1AB671051CDA8982000EBBAC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1AB671001CDA8982000EBBAC /* PBXTargetDependency */,
 			);
 			name = DISmoji;
 			productName = DISmoji;
@@ -181,6 +227,23 @@
 			productReference = 1AB670E41CDA7B91000EBBAC /* DISmojiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		1AB670F91CDA8982000EBBAC /* bb9moji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AB671021CDA8982000EBBAC /* Build configuration list for PBXNativeTarget "bb9moji" */;
+			buildPhases = (
+				1AB670F61CDA8982000EBBAC /* Sources */,
+				1AB670F71CDA8982000EBBAC /* Frameworks */,
+				1AB670F81CDA8982000EBBAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bb9moji;
+			productName = bb9moji;
+			productReference = 1AB670FA1CDA8982000EBBAC /* bb9moji.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +265,9 @@
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = 1AB670C41CDA7B90000EBBAC;
 					};
+					1AB670F91CDA8982000EBBAC = {
+						CreatedOnToolsVersion = 7.3;
+					};
 				};
 			};
 			buildConfigurationList = 1AB670C01CDA7B90000EBBAC /* Build configuration list for PBXProject "DISmoji" */;
@@ -220,6 +286,7 @@
 				1AB670C41CDA7B90000EBBAC /* DISmoji */,
 				1AB670D81CDA7B91000EBBAC /* DISmojiTests */,
 				1AB670E31CDA7B91000EBBAC /* DISmojiUITests */,
+				1AB670F91CDA8982000EBBAC /* bb9moji */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +310,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1AB670E21CDA7B91000EBBAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB670F81CDA8982000EBBAC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,6 +351,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AB670F61CDA8982000EBBAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB670FD1CDA8982000EBBAC /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +371,11 @@
 			isa = PBXTargetDependency;
 			target = 1AB670C41CDA7B90000EBBAC /* DISmoji */;
 			targetProxy = 1AB670E51CDA7B91000EBBAC /* PBXContainerItemProxy */;
+		};
+		1AB671001CDA8982000EBBAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AB670F91CDA8982000EBBAC /* bb9moji */;
+			targetProxy = 1AB670FF1CDA8982000EBBAC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -401,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DISmoji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = berlinbiennale.DISmoji;
@@ -412,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DISmoji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = berlinbiennale.DISmoji;
@@ -465,6 +554,28 @@
 			};
 			name = Release;
 		};
+		1AB671031CDA8982000EBBAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = bb9moji/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = berlinbiennale.DISmoji.bb9moji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1AB671041CDA8982000EBBAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = bb9moji/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = berlinbiennale.DISmoji.bb9moji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -498,6 +609,14 @@
 			buildConfigurations = (
 				1AB670F41CDA7B91000EBBAC /* Debug */,
 				1AB670F51CDA7B91000EBBAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1AB671021CDA8982000EBBAC /* Build configuration list for PBXNativeTarget "bb9moji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AB671031CDA8982000EBBAC /* Debug */,
+				1AB671041CDA8982000EBBAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
