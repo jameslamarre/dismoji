@@ -10,6 +10,8 @@ import UIKit
 
 class KeyboardViewController: UIInputViewController {
 
+    var calculatorView: UIView!
+    
     @IBOutlet var nextKeyboardButton: UIButton!
 
     override func updateViewConstraints() {
@@ -21,6 +23,8 @@ class KeyboardViewController: UIInputViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        loadInterface()
+        
         // Perform custom UI setup here
         self.nextKeyboardButton = UIButton(type: .System)
     
@@ -34,80 +38,22 @@ class KeyboardViewController: UIInputViewController {
     
         self.nextKeyboardButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor).active = true
         self.nextKeyboardButton.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor).active = true
-        
-        let buttonTitles = ["Q", "W", "E", "R", "T", "Y"]
-        var buttons = createButtons(buttonTitles)
-        var topRow = UIView(frame: CGRectMake(0, 0, 320, 40))
-        
-        for button in buttons {
-            topRow.addSubview(button)
-        }
-        
-        self.view.addSubview(topRow)
-        
-        addConstraints(buttons, containingView: topRow)
-        
+//
     }
     
-    func createButtons(titles: [String]) -&gt; [UIButton] {
-    
-        var buttons = [UIButton]()
-    
-        for title in titles {
-            let button = UIButton.buttonWithType(.System) as UIButton
-            button.setTitle(title, forState: .Normal)
-            button.setTranslatesAutoresizingMaskIntoConstraints(false)
-            button.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
-            button.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
-            button.addTarget(self, action: "keyPressed:", forControlEvents: .TouchUpInside)
-            buttons.append(button)
-        }
-    
-        return buttons
-    }
-    
-    func keyPressed(sender: AnyObject?) {
-        let button = sender as UIButton
-        let title = button.titleForState(.Normal)
-        (textDocumentProxy as UIKeyInput).insertText(title!)
-    }
-    
-    func addConstraints(buttons: [UIButton], containingView: UIView){
+    func loadInterface() {
         
-        for (index, button) in enumerate(buttons) {
-            
-            var topConstraint = NSLayoutConstraint(item: button, attribute: .Top, relatedBy: .Equal, toItem: containingView, attribute: .Top, multiplier: 1.0, constant: 1)
-            
-            var bottomConstraint = NSLayoutConstraint(item: button, attribute: .Bottom, relatedBy: .Equal, toItem: containingView, attribute: .Bottom, multiplier: 1.0, constant: -1)
-            
-            var leftConstraint : NSLayoutConstraint!
-            
-            if index == 0 {
-                
-                leftConstraint = NSLayoutConstraint(item: button, attribute: .Left, relatedBy: .Equal, toItem: containingView, attribute: .Left, multiplier: 1.0, constant: 1)
-                
-            }else{
-                
-                leftConstraint = NSLayoutConstraint(item: button, attribute: .Left, relatedBy: .Equal, toItem: buttons[index-1], attribute: .Right, multiplier: 1.0, constant: 1)
-                
-                var widthConstraint = NSLayoutConstraint(item: buttons[0], attribute: .Width, relatedBy: .Equal, toItem: button, attribute: .Width, multiplier: 1.0, constant: 0)
-                
-                containingView.addConstraint(widthConstraint)
-            }
-            
-            var rightConstraint : NSLayoutConstraint!
-            
-            if index == buttons.count - 1 {
-                
-                rightConstraint = NSLayoutConstraint(item: button, attribute: .Right, relatedBy: .Equal, toItem: containingView, attribute: .Right, multiplier: 1.0, constant: -1)
-                
-            }else{
-                
-                rightConstraint = NSLayoutConstraint(item: button, attribute: .Right, relatedBy: .Equal, toItem: buttons[index+1], attribute: .Left, multiplier: 1.0, constant: -1)
-            }
-            
-            containingView.addConstraints([topConstraint, bottomConstraint, rightConstraint, leftConstraint])
-        }
+        // load the nib file
+        var bb9mojiNib = UINib(nibName: "bbmoji", bundle: nil)
+        // instantiate the view
+        let bbmojiView = bb9mojiNib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        
+        // add interface to the main view
+        view.addSubview(bbmojiView)
+        
+        // copy the background color 
+        view.backgroundColor = bbmojiView.backgroundColor
+        
     }
 
     override func didReceiveMemoryWarning() {

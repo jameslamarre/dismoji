@@ -16,6 +16,7 @@
 		1AB670E91CDA7B91000EBBAC /* DISmojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB670E81CDA7B91000EBBAC /* DISmojiUITests.swift */; };
 		1AB670FD1CDA8982000EBBAC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB670FC1CDA8982000EBBAC /* KeyboardViewController.swift */; };
 		1AB671011CDA8982000EBBAC /* bb9moji.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1AB670FA1CDA8982000EBBAC /* bb9moji.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1AE5795A1CEA22F70002C127 /* bbmoji.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE579591CEA22F70002C127 /* bbmoji.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		1AB670FA1CDA8982000EBBAC /* bb9moji.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = bb9moji.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB670FC1CDA8982000EBBAC /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		1AB670FE1CDA8982000EBBAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AE579591CEA22F70002C127 /* bbmoji.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bbmoji.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				1AB670FC1CDA8982000EBBAC /* KeyboardViewController.swift */,
 				1AB670FE1CDA8982000EBBAC /* Info.plist */,
+				1AE579591CEA22F70002C127 /* bbmoji.xib */,
 			);
 			path = bb9moji;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE5795A1CEA22F70002C127 /* bbmoji.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +599,7 @@
 				1AB670EF1CDA7B91000EBBAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AB670F01CDA7B91000EBBAC /* Build configuration list for PBXNativeTarget "DISmojiTests" */ = {
 			isa = XCConfigurationList;
@@ -603,6 +608,7 @@
 				1AB670F21CDA7B91000EBBAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AB670F31CDA7B91000EBBAC /* Build configuration list for PBXNativeTarget "DISmojiUITests" */ = {
 			isa = XCConfigurationList;
@@ -611,6 +617,7 @@
 				1AB670F51CDA7B91000EBBAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AB671021CDA8982000EBBAC /* Build configuration list for PBXNativeTarget "bb9moji" */ = {
 			isa = XCConfigurationList;
@@ -619,6 +626,7 @@
 				1AB671041CDA8982000EBBAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
