@@ -10,9 +10,17 @@ import UIKit
 
 class KeyboardViewController: UIInputViewController {
 
-    var calculatorView: UIView!
-    
     @IBOutlet var nextKeyboardButton: UIButton!
+    @IBOutlet var keyOne: UILabel!
+    
+    @IBAction func didTapInsert() {
+        
+        var proxy = textDocumentProxy as UITextDocumentProxy
+        if let input = keyOne?.text as String? {
+            proxy.insertText(input)
+        }
+        
+    }
 
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -38,7 +46,17 @@ class KeyboardViewController: UIInputViewController {
     
         self.nextKeyboardButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor).active = true
         self.nextKeyboardButton.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor).active = true
-//
+
+        
+//        self.keyOne = UIButton(type: .System)
+//        self.keyOne.setTitle(NSLocalizedString("1", comment: "Title for first button"), forState: .Normal)
+//        self.keyOne.sizeToFit()
+//        self.keyOne.translatesAutoresizingMaskIntoConstraints = false
+//        self.keyOne.addTarget(self, action: "inputTextIntoField", forControlEvents: .TouchUpInside)
+//        self.keyOne.font = UIFont[name: "Helvetica", size: 18]
+//        self.view.addSubview(self.keyOne)
+        
+        
     }
     
     func loadInterface() {
@@ -54,6 +72,11 @@ class KeyboardViewController: UIInputViewController {
         // copy the background color 
         view.backgroundColor = bbmojiView.backgroundColor
         
+    }
+    
+    func inputTextIntoField() {
+        var proxy = self.textDocumentProxy as UITextDocumentProxy
+        proxy.insertText("1")
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,6 +99,8 @@ class KeyboardViewController: UIInputViewController {
             textColor = UIColor.blackColor()
         }
         self.nextKeyboardButton.setTitleColor(textColor, forState: .Normal)
+//        self.keyOne.setTitleColor(textColor, forState: .Normal)
+        
     }
 
 }

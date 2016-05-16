@@ -17,6 +17,7 @@
 		1AB670FD1CDA8982000EBBAC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB670FC1CDA8982000EBBAC /* KeyboardViewController.swift */; };
 		1AB671011CDA8982000EBBAC /* bb9moji.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1AB670FA1CDA8982000EBBAC /* bb9moji.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1AE5795A1CEA22F70002C127 /* bbmoji.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE579591CEA22F70002C127 /* bbmoji.xib */; };
+		1AE5795B1CEA55CB0002C127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB670CF1CDA7B91000EBBAC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -323,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE5795B1CEA55CB0002C127 /* Assets.xcassets in Resources */,
 				1AE5795A1CEA22F70002C127 /* bbmoji.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
